@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/static/style.css" xmlns="http://www.w3.org/1999/html">
+<center><h1 >PLACE ORDER </h1></center>
+<div>
+
+
+<center>
+    <form action="/update/" method="post">{% csrf_token %}
+        <table>{{form}}<br> </table>
+    <input type="submit" value="UPDATE"/>
+    </form>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <h2><span style="background-color: #FFFF00"{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</span></h2>
+    {% endfor %}
+</ul>
+{% endif %}
+</center>
+    </div>
+
