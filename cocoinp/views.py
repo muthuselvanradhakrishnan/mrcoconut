@@ -9,6 +9,8 @@ from twilio.rest import Client
 def Home(request):
     form = InputForm()
     return render(request, 'input.html',{'form':form})
+def About(request):
+    return render(request, 'about.html')
 
 def Update(request):
     name = request.POST['name']
