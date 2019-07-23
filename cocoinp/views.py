@@ -11,8 +11,8 @@ def Home(request):
     return render(request, 'input.html',{'form':form})
 
 def Update(request):
-    name = request.POST['hotel_name']
-    address = request.POST['hotel_address']
+    name = request.POST['name']
+    address = request.POST['address']
     mobnum = request.POST['mobile_number']
     qty = request.POST['qty_required']
     datereq = request.POST['date_required']
@@ -28,7 +28,7 @@ def Update(request):
         from_='whatsapp:+14155238886',
         to='whatsapp:+919566202380'
     )
-    buyer = Buyer(hotel_name =request.POST['name'],hotel_address = request.POST['address'],
+    buyer = Buyer(name =request.POST['name'],address = request.POST['address'],
                   mobile_number = int(request.POST['mobile_number']),qty_required = int(request.POST['qty_required']),
                   date_required=request.POST['date_required'])
     buyer.save()
