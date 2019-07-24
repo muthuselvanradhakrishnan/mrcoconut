@@ -43,8 +43,10 @@ textarea {
 }
 
 footer {
-  background-color: white;
+  background-color: #111;
+  color:white;
   text-align: center;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 
