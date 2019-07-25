@@ -26,6 +26,7 @@ urlpatterns = [
     path('home/', Home),
     path('about/', About),
     path('contact/', Contact),
+    path('products/', Products),
     path('update/', Update),
 ]
 urlpatterns += staticfiles_urlpatterns()
